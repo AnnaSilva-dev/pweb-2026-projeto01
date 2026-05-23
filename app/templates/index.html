@@ -1,11 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    aa
-</body>
-</html>
+{%extends 'base.html' %}
+{%load static%}
+
+{%block content%}
+
+<div id="hero" class="card bg-dark text-white border-0">
+
+    <img src="{% static 'imgs/capa.jpg' %}"
+         class="card-img rounded-0"
+         alt="hero"/>
+
+    <div class="card-img-overlay text-center">
+
+        <h1 class="display-1 fw-bold">
+            O Castelo Animado
+        </h1>
+
+        <h5>
+            Uma jornada encantada entre sonhos,
+            magia e um castelo que caminha pelos céus.
+        </h5>
+
+    </div>
+
+</div>
+
+<div id="resumo" class="resumo">
+
+    <div class="container p-5">
+
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+
+                <img src="{%static 'imgs/castelo.jpeg'%}"
+                     class="img-fluid"
+                     alt="castelo"/>
+
+            </div>
+
+            <div class="col-12 col-md-6">
+
+                <h1>Sinopse</h1>
+
+                <p class="text-justify">
+
+                    O Castelo Animado conta a história
+                    de Sophie, uma jovem que é transformada
+                    em uma senhora idosa por uma bruxa.
+
+                    Em busca de quebrar o feitiço,
+                    ela encontra o misterioso mago Howl
+                    e embarca em uma jornada mágica
+                    dentro de um castelo ambulante.
+
+                </p>
+
+                <a href="{%url 'sobre'%}"
+                   class="btn btn-outline-light">
+
+                   Saiba Mais
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="livros" class="bg-white">
+
+    <div class="container p-5">
+
+        <div class="row">
+
+            <h2 class="col text-center p-5">
+                A Trilogia de O Castelo Animado
+                feita por Diana Wynne Jones
+            </h2>
+
+        </div>
+
+        <div class="row g-3">
+
+            <!-- LIVRO 1 -->
+
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="{% static 'imgs/livro1.jpg' %}"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">
+                            O Castelo Animado
+                        </h5>
+
+                        <p class="card-text">
+
+                            Uma aventura marcada por magia,
+                            transformações e os impactos
+                            de uma guerra.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- LIVRO 2 -->
+
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="{% static 'imgs/livro2.jpg' %}"
+                         class="card-img-top"/>
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">
+                            O Castelo no Ar
+                        </h5>
+
+                        <p class="card-text">
+
+                            Uma jornada cheia de mistérios
+                            e fantasia inspirada em lendas orientais.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- LIVRO 3 -->
+
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <img src="{% static 'imgs/livro3.jpg' %}"
+                         class="card-img-top"/>
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title">
+                            A Casa dos Muitos Caminhos
+                        </h5>
+
+                        <p class="card-text">
+
+                            Uma história sobre descobertas mágicas
+                            dentro de uma casa cheia de segredos.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{%endblock%}

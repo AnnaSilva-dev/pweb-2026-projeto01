@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container p-5">
+
+    <div class="row">
+        <h2 class="col text-center p-5">
+            Elenco
+        </h2>
+    </div>
+
+    <div class="row g-4">
+
+        {% for personagem in personagens %}
+
+        <div class="col-12 col-md-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <img src="{% static personagem.imagem %}"
+                     class="card-img-top personagem-img">
+
+                <div class="card-body text-center">
+
+                    <h5>{{ personagem.nome }}</h5>
+
+                    <p>
+                        <strong>Dublador:</strong>
+                        {{ personagem.dublador }}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
